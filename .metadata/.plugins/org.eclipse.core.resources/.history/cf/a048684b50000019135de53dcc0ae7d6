@@ -1,0 +1,17 @@
+package patmat
+
+import org.scalatest.FunSuite
+
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
+
+import patmat.Huffman._
+
+@RunWith(classOf[JUnitRunner])
+class HuffmanSuite extends FunSuite {
+  println("Welcome to the Scala worksheet")
+  
+  Huffman.createCodeTree("abc")
+  
+  //Huffman.createCodeTree("abc")
+}

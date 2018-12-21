@@ -1,0 +1,20 @@
+package week3
+
+
+abstract class Arb {
+  def include(x: Int): Arb 
+}
+
+class Empty extends Arb {
+  
+}
+
+class NonEmpty extends Arb {
+  
+}
+
+
+
+object ABC extends App {
+  
+}

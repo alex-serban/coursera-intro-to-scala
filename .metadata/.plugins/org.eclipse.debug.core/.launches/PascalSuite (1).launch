@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="scala.scalatest">
+<stringAttribute key="SCALATEST_LAUNCH_INCLUDE_NESTED" value="false"/>
+<setAttribute key="SCALATEST_LAUNCH_TESTS_NAME"/>
+<stringAttribute key="SCALATEST_LAUNCH_TYPE" value="SUITE"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="recfun.PascalSuite"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="recfun"/>
+</launchConfiguration>

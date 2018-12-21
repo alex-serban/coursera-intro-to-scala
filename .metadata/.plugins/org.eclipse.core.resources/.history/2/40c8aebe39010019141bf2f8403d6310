@@ -1,0 +1,21 @@
+package week5
+
+object reduce {
+  def sum1(xs: List[Int]): Int = (0 :: xs) reduceLeft (_ + _)
+                                                  //> sum1: (xs: List[Int])Int
+  def sum2(xs: List[Int]): Int = (xs foldLeft 0)(_ + _)
+                                                  //> sum2: (xs: List[Int])Int
+
+  var l: List[Int] = List(1, 2, 3)                //> l  : List[Int] = List(1, 2, 3)
+  var r: List[Int] = List(7, 8, 9)                //> r  : List[Int] = List(7, 8, 9)
+
+  sum1(l)                                         //> res0: Int = 6
+  sum2(l)                                         //> res1: Int = 6
+
+  l.foldLeft(0)(_ + _)                            //> res2: Int = 6
+
+  l.foldRight(r)(_ :: _)                          //> res3: List[Int] = List(1, 2, 3, 7, 8, 9)
+
+  def mapFun[T, U](xs: List[T], f: T => U): List[U] =
+    (xs foldRight List[U]())((x,y)=>f(x)::y)      //> mapFun: [T, U](xs: List[T], f: T => U)List[U]
+}

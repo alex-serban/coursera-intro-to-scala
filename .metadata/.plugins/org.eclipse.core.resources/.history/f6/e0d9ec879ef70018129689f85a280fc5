@@ -1,0 +1,22 @@
+package week3
+
+
+abstract class Arb {
+  def include(x: Int): Arb 
+  def remove(x: Int): Arb
+  def contains(x: Int): Boolean
+}
+
+class Empty extends Arb {
+  def include(x: Int) = new NonEmpty(x, new Empty, new Empty)
+}
+
+class NonEmpty(value: Int, left: Arb, right: Arb) extends Arb {
+  
+}
+
+
+
+object ABC extends App {
+  
+}

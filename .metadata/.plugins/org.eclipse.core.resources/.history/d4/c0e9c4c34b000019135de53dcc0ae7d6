@@ -1,0 +1,22 @@
+package week4
+
+object ciorna {
+
+  var L = List('c', 'a', 'b', 'a')                //> L  : List[Char] = List(c, a, b, a)
+  
+
+  def formDict(L: List[Char], dict: List[(Char, Int)]): List[(Char, Int)] = {
+    if (L == Nil) dict
+    else if (dict == Nil) formDict(L.tail, (L.head, 1) :: dict)
+    else if (L.head == dict.head._1) formDict(L.tail, (L.head, dict.head._2 + 1) :: dict.tail)
+    else formDict(L.tail, (L.head, 1) :: dict)
+  }                                               //> formDict: (L: List[Char], dict: List[(Char, Int)])List[(Char, Int)]
+  
+  var A=formDict(L.sortWith(_ > _), Nil).sortWith(_._2 > _._2)
+                                                  //> A  : List[(Char, Int)] = List((a,2), (b,1), (c,1))
+
+	L.count(_=>true)                          //> res0: Int = 4
+	L.size                                    //> res1: Int = 4
+	
+	var X=List():::List('0','1'):::List('2','3')  //> res2: List[Char] = List(0, 1, 2, 3)
+}

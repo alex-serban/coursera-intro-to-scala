@@ -1,0 +1,11 @@
+package patmat
+import patmat.Huffman._
+
+
+class test{
+  println("Welcome to the Scala worksheet")
+  
+  Huffman.createCodeTree("abc".toList)
+  
+
+}

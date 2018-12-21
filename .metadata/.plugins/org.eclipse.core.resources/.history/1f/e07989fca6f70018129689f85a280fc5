@@ -1,0 +1,35 @@
+package week3
+
+abstract class Arb {
+  def include(x: Int): Arb
+  def remove(x: Int): Arb
+  def contains(x: Int): Boolean
+}
+
+object Empty extends Arb {
+  def include(x: Int) = new NonEmpty(x, Empty, Empty)
+  def remove(x: Int) = this
+  def contains(x: Int) = false
+}
+
+class NonEmpty(value: Int, left: Arb, right: Arb) extends Arb {
+
+  def include(x: Int): Arb = {
+    if(x > value) new NonEmpty(value, left, new NonEmpty(x, Empty, Empty))
+    else if(x<value) new NonEmpty(value, new NonEmpty(x, Empty, Empty), right)
+    else this
+  }
+
+  def remove(x: Int): Arb = ???
+  
+  def contains(x: Int): Boolean = {
+    if (x < value) left.contains(x)
+    else if (x > value) right.contains(x)
+    else true
+  }
+
+}
+
+object ABC extends App {
+
+}

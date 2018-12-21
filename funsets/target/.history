@@ -1,0 +1,25 @@
+eclipse
+compile
+run
+test
+compile
+test
+console
+compile
+console
+compile
+console
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+sbt "submit alex.serban.2008@gmail.com D6SK9zygc9SU6i8t"
+exit
+compile
+exit

@@ -1,0 +1,13 @@
+package week5
+
+object reduce {
+  def sum1(xs: List[Int]): Int = (0 :: xs) reduceLeft (_ + _)
+  def sum2(xs: List[Int]): Int = (xs foldLeft 0)(_ + _)
+
+  var l: Int = List()
+
+  sum1(l)
+  sum2(l)
+
+  l.foldLeft(0)(_ + _)
+}

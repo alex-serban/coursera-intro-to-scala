@@ -1,0 +1,13 @@
+package week5
+
+object listz {
+
+  def init[T](xs: List[T]): List[T] = xs match {
+    case List()  => throw new Error("init of empty list")
+    case List(x) => List()
+    case y :: ys => y :: init(ys)
+  }                                               //> init: [T](xs: List[T])List[T]
+
+	var a = "123456".toList                   //> a  : List[Char] = List(1, 2, 3, 4, 5, 6)
+
+}

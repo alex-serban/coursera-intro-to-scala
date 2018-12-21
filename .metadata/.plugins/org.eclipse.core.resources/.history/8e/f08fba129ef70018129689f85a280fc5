@@ -1,0 +1,20 @@
+package week3
+
+
+abstract class Arb {
+  
+}
+
+class Empty extends Arb {
+  
+}
+
+class NonEmpty extends Arb {
+  
+}
+
+
+
+object ABC extends App {
+  
+}

@@ -1,0 +1,11 @@
+package patmat
+import patmat.Huffman._
+
+@RunWith(classOf[JUnitRunner])
+class test{
+  println("Welcome to the Scala worksheet")
+  
+  Huffman.createCodeTree("abc")
+  
+  //Huffman.createCodeTree("abc")
+}

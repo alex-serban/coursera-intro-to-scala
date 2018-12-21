@@ -1,0 +1,23 @@
+package week5
+
+object listz {
+
+  def init[T](xs: List[T]): List[T] = xs match {
+    case List()  => throw new Error("init of empty list")
+    case List(x) => List()
+    case y :: ys => y :: init(ys)
+  }                                               //> init: [T](xs: List[T])List[T]
+
+  var a = "0123456".toList                        //> a  : List[Char] = List(0, 1, 2, 3, 4, 5, 6)
+
+  init(a)                                         //> res0: List[Char] = List(0, 1, 2, 3, 4, 5)
+
+  def removeAt[T](n: Int, xs: List[T]): List[T] = xs match {
+    case List()              => xs
+    case y :: ys if (n == 0) => ys
+    case y :: ys             => List(y) ++ removeAt(n - 1, ys)
+  }                                               //> removeAt: [T](n: Int, xs: List[T])List[T]
+
+	removeAt(7, a)                            //> res1: List[Char] = List(0, 1, 2, 3, 4, 5, 6)
+
+}
